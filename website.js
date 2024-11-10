@@ -1,13 +1,19 @@
-// Select all accordion headers
+// Select all accordion headers (titles)
 const accordionHeader = document.querySelectorAll(".accordionHeader");
 
-accordionHeader.forEach((header) => {
-  // Add a click event listener to each header
-  header.addEventListener("click", () => {
-    // Find the corresponding content div
-    const content = header.nextElementSibling;
+accordionHeader.forEach((title) => {
+  title.addEventListener("click", function () {
+    // Toggle the 'active' class on the clicked title div
+    this.classList.toggle("active");
 
-    // Toggle the 'show' class on the content div to toggle visibility
-    content.classList.toggle("show");
+    // Find the adjacent panel (the next sibling)
+    const panel = this.nextElementSibling;
+
+    // Check if the panel is already displayed and toggle it
+    if (panel.style.display === "block") {
+      panel.style.display = "none"; // Hide the panel if it's currently visible
+    } else {
+      panel.style.display = "block"; // Show the panel if it's hidden
+    }
   });
 });
