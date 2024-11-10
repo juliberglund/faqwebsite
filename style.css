@@ -1,0 +1,38 @@
+/* Basic styling for the accordion */
+.accWrapper {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+}
+
+/* Accordion header styles */
+.accordionHeader {
+  background-color: #f1f1f1;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.accordionHeader:hover {
+  background-color: #ddd;
+}
+
+/* Accordion content, hidden by default */
+.accordion-content {
+  padding: 0 10px;
+  display: none; /* Hide content by default */
+  background-color: #f9f9f9;
+  font-size: 14px;
+}
+
+/* Show the content when the .show class is added */
+.accordion-content.show {
+  display: block; /* Show content */
+}
